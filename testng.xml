@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testcases.AddToCart"/>
+      <class name="testcases.LoginFlow"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
