@@ -23,8 +23,8 @@ public class LoginFlow extends ProjectMethods{
 	public void Login(String email, String password)  {
 		
 		new HomePage_RRS()
-		.clickaccount()
-		.enteremail(email);
+		.clickaccount();
+		//.enteremail(email);
 		/*.clickNext()
 		.enterpassword(password)
 		.login()
