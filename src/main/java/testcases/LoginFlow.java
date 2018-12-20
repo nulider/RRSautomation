@@ -24,10 +24,10 @@ public class LoginFlow extends ProjectMethods{
 		
 		new HomePage_RRS()
 		.clickaccount()
-		.enteremail(email)
-		.clickNext()
+		.enteremail(email);
+		/*.clickNext()
 		.enterpassword(password)
 		.login()
-		.accountcreation();
+		.accountcreation();*/
 	}
 }
