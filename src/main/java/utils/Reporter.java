@@ -1,8 +1,11 @@
 package utils;
 
+import java.io.File;
 import java.io.IOException;
 
-import com.aventstack.extentreports.AnalysisStrategy;
+import org.testng.annotations.AfterSuite;
+import org.zeroturnaround.zip.ZipUtil;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -15,10 +18,12 @@ public abstract class Reporter {
 	public static ExtentReports extent;
 	public static ExtentTest test, suiteTest;
 	public String testCaseName, testNodes, testDescription, category, authors;
-
-
+	@AfterSuite
+	public void zipFolder() {
+		ZipUtil.pack(new File("./reports/images"), new File("./reports/images.zip"));
+	}
 	public void startResult() {
-		html = new ExtentHtmlReporter("./reports/democases.html");
+		html = new ExtentHtmlReporter("./reports/images/democases.html");
 		html.setAppendExisting(true);		
 		extent = new ExtentReports();		
 		extent.attachReporter(html);	
@@ -49,7 +54,7 @@ public abstract class Reporter {
 			snapNumber = takeSnap();
 			try {
 				img = MediaEntityBuilder.createScreenCaptureFromPath
-						("./../reports/images/"+snapNumber+".jpg").build();
+						("./"+snapNumber+".jpg").build();
 			} catch (IOException e) {				
 			}
 		}

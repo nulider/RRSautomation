@@ -8,6 +8,13 @@
 	<packaging>jar</packaging>
 
 	<dependencies>
+	<!-- https://mvnrepository.com/artifact/org.zeroturnaround/zt-zip -->
+<dependency>
+    <groupId>org.zeroturnaround</groupId>
+    <artifactId>zt-zip</artifactId>
+    <version>1.13</version>
+</dependency>
+	
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
