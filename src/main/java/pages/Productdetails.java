@@ -47,6 +47,29 @@ public class Productdetails extends ProjectMethods{
 		return new giftlink();
 	}
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'selSizeTitle')]")
+	private WebElement yousize;
+	
+	public giftlink clickgiftlinks() 
+	{
+		try {
+			pageScroll();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		highLighterMethod(driver, giftlink);
+		click(giftlink);
+		try {
+			pageScrollUp();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		highLighterMethod(driver, yousize);
+		return new giftlink();
+	}
+	
 	
 	
 	
@@ -291,6 +314,12 @@ public class Productdetails extends ProjectMethods{
 		highLighterMethod(driver, size);
 		click(size);
 		FluentWait();
+		try {
+			pageScroll();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return this;
 	}
@@ -362,6 +391,19 @@ public class Productdetails extends ProjectMethods{
 		return new OrderSummary();
 	}
 	
+	@FindBy(how=How.XPATH,using="//*[@id='smartGift']")
+	private WebElement giftlinks;
+	public ViewCart viewgift() 
+	{
+		
+		
+		verifyDisplayed(giftlinks);
+		highLighterMethod(driver, giftlinks);
+		
+		
+		
+		return new ViewCart();
+	}
 	
 	
 }

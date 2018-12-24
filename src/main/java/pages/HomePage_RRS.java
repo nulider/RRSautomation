@@ -130,6 +130,41 @@ public class HomePage_RRS extends ProjectMethods{
 		return new ShopNow();
 	}
 			
+	@FindBy(how=How.XPATH,using="//*[contains(@class,'search2 ui-autocomplete-input')]")
+	private WebElement searchfields;
+	@FindBy(how=How.XPATH,using="//*[contains(@value,'SEARCH')]")
+	private WebElement sbutton;	
+	public ViewCart enterprodname(String name)
+	{
+		
+		type(searchfields,name);
+		click(sbutton);
+		return new ViewCart();
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='specialist2']/div/form/div/input[@value='SEARCH']")
+	private WebElement searchbuttons;
+
+	
+	public Searchresults entersearch(String data)
+	{
+
+
+		refresh();
+		FluentWait();
+		
+		verifyDisplayed(searchfield);
+		highLighterMethod(driver, searchfield);
+		
+		type(searchfield, data);
+		
+		click(searchbuttons);
+		return new Searchresults();
+		
+	}
+	
+	
+	
 	
 	
 

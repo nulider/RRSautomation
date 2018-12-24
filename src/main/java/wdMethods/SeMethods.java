@@ -451,6 +451,14 @@ takeSnap();
 		takeSnap();
 	}
 	
+	public void pageScrollUp() throws AWTException
+	{
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_PAGE_UP);
+		robot.keyRelease(KeyEvent.VK_PAGE_UP);
+		takeSnap();
+	}
+	
 	public void FluentWait()
 	{
 try {

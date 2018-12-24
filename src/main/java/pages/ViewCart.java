@@ -254,5 +254,64 @@ public class ViewCart extends ProjectMethods{
 	}
 	
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'rrsglobalnav-womens')]/p")
+	private WebElement category;
+	@FindBy(how=How.XPATH,using="//*[contains(@href,'/rrs/womensshoes/womensracing/?cm_sp=nav-_-womens-_-racing')]")
+	private WebElement subcategory;
+	
+	
+	public ViewCart clickcategory() 
+	{
+		
+		mouseHover(category);
+		mouseHover(subcategory);
+		click(subcategory);
+		
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'26026_img')]")
+	private WebElement chooseshoe;
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@title,'Black/White')]")
+	private WebElement color;
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Size;5')]")
+	private WebElement size;
+	public ViewCart shoeselect() 
+	{
+		
+		click(chooseshoe);
+		click(color);
+		click(size);
+		
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@id='smartGift']")
+	private WebElement giftlinks;
+	public HomePage_RRS viewgifts() 
+	{
+		
+		try {
+			pageScroll();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		verifyDisplayed(giftlinks);
+		highLighterMethod(driver, giftlinks);
+		
+		
+		
+		return new HomePage_RRS();
+	}
+	
+	
+	
+	
+	
+	
 	
 }

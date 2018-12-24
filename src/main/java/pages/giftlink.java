@@ -499,7 +499,7 @@ public class giftlink  extends ProjectMethods{
 	public giftlink gmaillogin(String gee,String pww) {
 		
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click();", gm);
+		//js.executeScript("arguments[0].click();", gm);
 		js.executeScript("arguments[0].click();", ge);
 		type(ge,gee);
 		js.executeScript("arguments[0].click();", ne);

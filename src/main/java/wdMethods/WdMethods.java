@@ -49,6 +49,7 @@ public interface WdMethods {
 		public void pressesc();
 		
 		public void pageScroll () throws AWTException;
+		public void pageScrollUp() throws AWTException; 
 		
 		public void refresh();
 		
