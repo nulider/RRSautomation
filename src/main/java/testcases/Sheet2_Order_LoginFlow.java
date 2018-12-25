@@ -6,22 +6,22 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class CouponCode extends ProjectMethods{
+public class Sheet2_Order_LoginFlow extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
 		testCaseName="Orders";
-		testDescription="Verify whether coupon code is working fine or not";
+		testDescription="Verify the orders flow after login";
 		testNodes="PDP";
 		category="Regression";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="coupon";
+		dataSheetName="TC030";
 		
 		
 	}
 	
 	@Test(dataProvider="fetchData")
-	public void verifycouponcode(String email, String password, String brandname,String code)  {
+	public void orderswithLogin(String email, String password, String brandname,String code)  {
 		
 		
 			new HomePage_RRS()
@@ -40,7 +40,18 @@ public class CouponCode extends ProjectMethods{
 			.emailsection()
 			.shippingsection()
 			.billingsection()
-			.entercouponcode(code);
+			.entercouponcode(code)
+			.placeorderButtonclick()
+			.orderConfirmationmessage();
+			
+			
+			
+			
+			
+			
+			
 	}
-}
-	
+
+	}
+
+

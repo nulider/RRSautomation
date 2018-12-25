@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class Fit extends ProjectMethods{
+public class Sheet2_FitFinder extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
 		testCaseName="Add to cart section";

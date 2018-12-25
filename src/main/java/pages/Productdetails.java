@@ -187,29 +187,14 @@ public class Productdetails extends ProjectMethods{
 		return this;
 	}
 	
-	@FindBy(how=How.XPATH,using="//*[contains(@id,'grp_2Tab')]")
+	@FindBy(how=How.XPATH,using="//*[@class='recomendation__number_text']")
 	private WebElement reviews;
 	
 	public Productdetails reviewsTab() 
 	{
-		try {
-			pageScroll();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			pageScroll();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			pageScroll();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		
+click(reviews);
 
 		return this;
 	}
@@ -343,6 +328,12 @@ public class Productdetails extends ProjectMethods{
 	private WebElement sizechart;
 	public Productdetails sizechart() 
 	{
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		highLighterMethod(driver, sizechart);
 		click(sizechart);
 		

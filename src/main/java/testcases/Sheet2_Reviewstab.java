@@ -3,33 +3,33 @@ package testcases;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.awt.AWTException;
+
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PDP_SocialmediaLink  extends ProjectMethods{
+public class Sheet2_Reviewstab extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Facebbok navigation";
-		testDescription="Verify whether facebook page navigation is proper or not";
+		testCaseName="Reviews";
+		testDescription="Verify whether reviews are present or not";
 		testNodes="PDP";
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC021";
+		dataSheetName="TC022";
 		
 		
 	}
 	
 	@Test
-	public void facebookpage()  {
+	public void reviews() {
 		
 		
 			new HomePage_RRS()
 			.searchbrands()
 			.rgearbrand()
 			.clickproductlink()
-			.socialmedialinks()
-			.fbnavigation()
-			.newtab();
+			.reviewsTab();
 }
 }

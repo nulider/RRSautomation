@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class Orders_GuestFlow extends ProjectMethods{
+public class Sheet2_Orders_GuestFlow extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
 		testCaseName="Orders";

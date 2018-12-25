@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PaywithGiftCard extends ProjectMethods{
+public class Sheet2_PaywithGiftCard extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
 		testCaseName="Orders";
@@ -54,7 +54,7 @@ public class PaywithGiftCard extends ProjectMethods{
 			.enterpinnumber(pin)
 			.clickapply()
 			.revieworder()
-			.placeorderButton()
+		.placeorderButton()
 			.orderConfirmationmessage();
 			
 			
