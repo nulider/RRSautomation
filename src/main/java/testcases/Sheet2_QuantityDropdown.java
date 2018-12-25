@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PDP_QuantityDropdown extends ProjectMethods{
+public class Sheet2_QuantityDropdown extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
 		testCaseName="Display of units in quantity dropdown";

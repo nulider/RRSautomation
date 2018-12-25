@@ -1,38 +1,37 @@
 package testcases;
 
-
-
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PDP_ClickaProduct extends ProjectMethods{
+public class Sheet2_Chooseasize extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Clicking a product";
-		testDescription="Verifying the product link navigation";
+		testCaseName="Choose a size for the product";
+		testDescription="Verify if a size can be chosen";
 		testNodes="PDP";
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC019";
+		dataSheetName="TC020";
 		
 		
 	}
 	
 	@Test
-	public void clickaProduct()  {
+	public void choosesize()  {
 		
 		
 			new HomePage_RRS()
 			.searchbrands()
 			.rgearbrand()
 			.clickproductlink()
-			.verifyProduct();
+			.choosesize();
 			
 			
 	}
 
 	}
+

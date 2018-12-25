@@ -6,11 +6,11 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PDP_ChooseColorandtheVariantChanges extends ProjectMethods{
+public class Sheet2_AddtoCart extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Choose a color for the product";
-		testDescription="Verify when a color is chosen, the variant changes";
+		testCaseName="Add to cart is clicked after choosing the size and color";
+		testDescription="Verify if add to cart works when size and color are chosen";
 		testNodes="PDP";
 		category="Smoke";
 		authors="arjun";
@@ -21,7 +21,7 @@ public class PDP_ChooseColorandtheVariantChanges extends ProjectMethods{
 	}
 	
 	@Test
-	public void chooseacolor()  {
+	public void addtocart()  {
 		
 		
 			new HomePage_RRS()
@@ -29,9 +29,14 @@ public class PDP_ChooseColorandtheVariantChanges extends ProjectMethods{
 			.rgearbrand()
 			.clickproductlink()
 			.choosecolor()
-			.chooseanothercolor();
+			.choosesize()
+			.addtocart()
+			.viewCart()
+			.verifycarttitle();
+			
 			
 			
 	}
 
 	}
+

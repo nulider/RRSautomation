@@ -6,29 +6,29 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PDP_ChooseaColor extends ProjectMethods{
+public class Sheet2_VisibilityofGetthisPriceLink  extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Choose a color for the product";
-		testDescription="Verify if a color can be chosen";
+		testCaseName="Visibility of get this link";
+		testDescription="Verifying the visibility of get this link";
 		testNodes="PDP";
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC020";
+		dataSheetName="TC019";
 		
 		
 	}
 	
 	@Test
-	public void choosecolor()  {
+	public void getthisPrice()  {
 		
 		
 			new HomePage_RRS()
 			.searchbrands()
 			.rgearbrand()
 			.clickproductlink()
-			.choosecolor();
+			.getthispricelink();
 			
 			
 	}

@@ -6,32 +6,31 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PDP_VerifyMSRPandVIPprice extends ProjectMethods{
+public class Sheet2_ClickingNextbutton extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Verify MSRP and VIP price of a product";
-		testDescription="Verifying the MSRP and VIP price of a product";
-		testNodes="PDP";
+		testCaseName="Clicking Next button";
+		testDescription="Checking the functionality of next button";
+		testNodes="test";
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC019";
+		dataSheetName="TC014";
 		
 		
 	}
 	
 	@Test
-	public void verifyprice()  {
+	public void nextButton()  {
 		
 		
 			new HomePage_RRS()
 			.searchbrands()
 			.rgearbrand()
-			.clickproductlink()
-			.verifymsrp()
-			.verifyvip();
-			
-			
-	}
-
-	}
+			.next();
+		
+		
+		
+		
+}
+}

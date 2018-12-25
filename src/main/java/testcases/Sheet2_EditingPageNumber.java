@@ -1,36 +1,40 @@
 package testcases;
 
+import java.awt.AWTException;
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PLP_ClickingNextbutton extends ProjectMethods{
+public class Sheet2_EditingPageNumber extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Clicking Next button";
-		testDescription="Checking the functionality of next button";
+		testCaseName="Editing page number";
+		testDescription="Checking the functionality of editing page number";
 		testNodes="test";
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC014";
+		dataSheetName="TC018";
 		
 		
 	}
 	
-	@Test
-	public void nextButton()  {
+	@Test(dataProvider="fetchData")
+	public void EditingPageNumber(String value,String value1)  {
 		
 		
 			new HomePage_RRS()
 			.searchbrands()
 			.rgearbrand()
-			.next();
+			
+			.edit(value)
+			.editvalid(value1);
+		
+			
 		
 		
-		
-		
-}
+	}
 }

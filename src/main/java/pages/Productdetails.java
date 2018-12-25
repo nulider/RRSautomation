@@ -78,7 +78,12 @@ public class Productdetails extends ProjectMethods{
 	
 	public Productdetails verifymsrp() 
 	{
-		
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		verifyDisplayed(msrp);
 		highLighterMethod(driver, msrp);
 		return this;
@@ -99,7 +104,12 @@ public class Productdetails extends ProjectMethods{
 	private WebElement getthisprice;
 	public Productdetails getthispricelink() 
 	{
-		
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		verifyDisplayed(vip);
 		highLighterMethod(driver, getthisprice);
 		return this;
@@ -109,7 +119,12 @@ public class Productdetails extends ProjectMethods{
 	private WebElement itemid;
 	public Productdetails itemid() 
 	{
-		
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		verifyDisplayed(itemid);
 		highLighterMethod(driver, itemid);
 		return this;
@@ -338,7 +353,20 @@ public class Productdetails extends ProjectMethods{
 	private WebElement quantity;
 	public Productdetails quantity() 
 	{
+		try {
+			pageScroll();
+		} catch (AWTException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
+		try {
+			pageScroll();
+		} catch (AWTException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		click(quantity);	
+		
 		highLighterMethod(driver, quantity);
 		
 		

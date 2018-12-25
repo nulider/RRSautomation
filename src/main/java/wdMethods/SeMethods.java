@@ -443,11 +443,18 @@ takeSnap();
 			
 	}
 	
+	public void typeafterclearing(WebElement ele, String data)
+	{
+		ele.sendKeys(Keys.chord(Keys.CONTROL, "a"), data);
+	}
+	
 	public void pageScroll() throws AWTException
 	{
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_PAGE_DOWN);
 		robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
+		
+		
 		takeSnap();
 	}
 	

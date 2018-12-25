@@ -6,33 +6,31 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PDP_Incorrect_AddtoCart extends ProjectMethods{
+public class Sheet2_VisibilityofItemID extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Add to cart is clicked without choosing the size and color";
-		testDescription="Verify if add to cart works when size and color aren't chosen";
+		testCaseName="Visibility of item ID link";
+		testDescription="Verifying the visibility of item ID link";
 		testNodes="PDP";
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC020";
+		dataSheetName="TC019";
 		
 		
 	}
 	
 	@Test
-	public void addtocartIncorrect()  {
+	public void visibilityofItemID()  {
 		
 		
 			new HomePage_RRS()
 			.searchbrands()
 			.rgearbrand()
 			.clickproductlink()
-			.addtocart()
-			.addtocartIncorrectmessage();
+			.itemid();
 			
 			
 	}
 
 	}
-

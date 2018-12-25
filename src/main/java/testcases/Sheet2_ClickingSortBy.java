@@ -6,25 +6,28 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PLP_ClickingShopnowLink extends ProjectMethods{
+public class Sheet2_ClickingSortBy extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Clicking Shop now link";
-		testDescription="Checking the redirection of shop now link";
+		testCaseName="Clicking SortBy dropdown";
+		testDescription="Checking the functionality of Sort by dropdown";
 		testNodes="test";
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
+		dataSheetName="TC013";
 		
 		
 	}
 	
-	@Test
-	public void ClickShopNow()  {
+	@Test(dataProvider="fetchData")
+	public void sortBy(String text)  {
 		
 		new HomePage_RRS()
-		.clickshopNow();
+		.searchbrands()
+		.rgearbrand()
+		.clickSort(text);
 		
-
-}
+		
+	}
 }

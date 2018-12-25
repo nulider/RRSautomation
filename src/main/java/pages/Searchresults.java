@@ -90,6 +90,18 @@ private WebElement searchresultdisplayed;
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			pageScroll();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		highLighterMethod(driver, sortbydropdown);
 		return this;
 	}
@@ -106,13 +118,19 @@ private WebElement searchresultdisplayed;
 			e.printStackTrace();
 		}
 		click(clickNext);
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		try {
 			pageScroll();
 		} catch (AWTException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return new Newnext();
 		
 		
@@ -123,16 +141,28 @@ private WebElement searchresultdisplayed;
 	@FindBy(how=How.XPATH,using="//input[@class='advancedSearchTextBox']")
 	private WebElement edited;
 	
-public Newpageresults edit(String value) {
+public Searchresults edit(String value) {
 	
 	type(edited,value);
 	clickenter();
+	
+	return this;
+		
+		
+
+	}
+
+public Newpageresults editvalid(String value1) {
+	
+	typeafterclearing(edited,value1);
+	clickenter();
 	try {
-		pageScroll();
-	} catch (AWTException e) {
+		Thread.sleep(4000);
+	} catch (InterruptedException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+	
 	return new Newpageresults();
 		
 		

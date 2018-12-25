@@ -1,42 +1,38 @@
 package testcases;
 
+
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PDP_AddtoCart extends ProjectMethods{
+public class Sheet2_ClickaProduct extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Add to cart is clicked after choosing the size and color";
-		testDescription="Verify if add to cart works when size and color are chosen";
+		testCaseName="Clicking a product";
+		testDescription="Verifying the product link navigation";
 		testNodes="PDP";
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC020";
+		dataSheetName="TC019";
 		
 		
 	}
 	
 	@Test
-	public void addtocart()  {
+	public void clickaProduct()  {
 		
 		
 			new HomePage_RRS()
 			.searchbrands()
 			.rgearbrand()
 			.clickproductlink()
-			.choosecolor()
-			.choosesize()
-			.addtocart()
-			.viewCart()
-			.verifycarttitle();
-			
+			.verifyProduct();
 			
 			
 	}
 
 	}
-

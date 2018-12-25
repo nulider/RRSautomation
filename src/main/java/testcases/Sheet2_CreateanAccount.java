@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class CreateanAccount  extends ProjectMethods{
+public class Sheet2_CreateanAccount  extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
 		testCaseName="Create an account";

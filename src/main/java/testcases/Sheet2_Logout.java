@@ -1,33 +1,36 @@
 package testcases;
 
-import java.awt.AWTException;
-
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class LoginFlow extends ProjectMethods{
+public class Sheet2_Logout extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Login flow";
-		testDescription="Login to an existing account";
+		testCaseName="Logout";
+		testDescription="Logout an user";
 		testNodes="test";
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC007";
+		dataSheetName="TC011";
 	}
+	
 	@Test(dataProvider="fetchData")
-	public void Login(String email, String password)  {
+	public void Loggingout(String email, String password)  {
 		
 		new HomePage_RRS()
-		.clickaccount();
-		//.enteremail(email);
-		/*.clickNext()
+		.clickaccount()
+		.enteremail(email)
+		.clickNext()
 		.enterpassword(password)
 		.login()
-		.accountcreation();*/
+		.accountcreation()
+		.mousehover()
+		.logout()
+		.verifysearchbutton();
+		
 	}
-}
+	}

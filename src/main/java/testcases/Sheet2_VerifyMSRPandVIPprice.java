@@ -1,38 +1,37 @@
 package testcases;
 
-import java.awt.AWTException;
-
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PLP_EditingPageNumber extends ProjectMethods{
+public class Sheet2_VerifyMSRPandVIPprice extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Editing page number";
-		testDescription="Checking the functionality of editing page number";
-		testNodes="test";
+		testCaseName="Verify MSRP and VIP price of a product";
+		testDescription="Verifying the MSRP and VIP price of a product";
+		testNodes="PDP";
 		category="Smoke";
 		authors="arjun";
 		browserName="chrome";
-		dataSheetName="TC018";
+		dataSheetName="TC019";
 		
 		
 	}
 	
-	@Test(dataProvider="fetchData")
-	public void EditingPageNumber(String value)  {
+	@Test
+	public void verifyprice()  {
 		
 		
 			new HomePage_RRS()
 			.searchbrands()
 			.rgearbrand()
-			.edit(value);
+			.clickproductlink()
+			.verifymsrp()
+			.verifyvip();
 			
 			
-		
-		
 	}
-}
+
+	}

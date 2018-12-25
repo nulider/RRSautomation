@@ -6,11 +6,11 @@ import org.testng.annotations.Test;
 import pages.HomePage_RRS;
 import wdMethods.ProjectMethods;
 
-public class PDP_Chooseasize extends ProjectMethods{
+public class Sheet2_Incorrect_AddtoCart extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Choose a size for the product";
-		testDescription="Verify if a size can be chosen";
+		testCaseName="Add to cart is clicked without choosing the size and color";
+		testDescription="Verify if add to cart works when size and color aren't chosen";
 		testNodes="PDP";
 		category="Smoke";
 		authors="arjun";
@@ -21,14 +21,15 @@ public class PDP_Chooseasize extends ProjectMethods{
 	}
 	
 	@Test
-	public void choosesize()  {
+	public void addtocartIncorrect()  {
 		
 		
 			new HomePage_RRS()
 			.searchbrands()
 			.rgearbrand()
 			.clickproductlink()
-			.choosesize();
+			.addtocart()
+			.addtocartIncorrectmessage();
 			
 			
 	}
