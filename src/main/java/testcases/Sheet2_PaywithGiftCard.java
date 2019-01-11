@@ -9,7 +9,7 @@ import wdMethods.ProjectMethods;
 public class Sheet2_PaywithGiftCard extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Orders";
+		testCaseName="Orderwithgiftcard";
 		testDescription="Verify the orders flow with gift card";
 		testNodes="PDP";
 		category="Regression";

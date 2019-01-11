@@ -211,7 +211,18 @@ highLighterMethod(driver, showperpage);
 
 		return new Productdetails();
 	}
+	@FindBy(how=How.XPATH,using="//*[@class='klaviyo_inline_fieldset']/input")
+	private WebElement mail;
 	
+	@FindBy(how=How.XPATH,using="//*[@class='klaviyo_inline_fieldset']/button")
+	private WebElement clicksubs;
+	
+	public Searchresults subscribe(String emailaddress)
+	{
+		type(mail,emailaddress);
+		click(clicksubs);
+		return this;
+	}
 	
 	
 	@FindBy(how=How.XPATH,using="//*[contains(@id,'15425_img_url')]")
@@ -237,6 +248,12 @@ try {
 		return new Productdetails();
 	}
 	
+	@FindBy(how=How.XPATH,using="//*[@id='13095_img']")
+	private WebElement asicsprod;
 	
-	
+	public Productdetails clickproductlinkforkids()
+	{
+		click(asicsprod);
+		return new Productdetails();
+	}
 }

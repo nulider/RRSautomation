@@ -142,6 +142,55 @@ public class HomePage_RRS extends ProjectMethods{
 		return new ViewCart();
 	}
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'storelocator2')]")
+	private WebElement clickStores;
+	
+	public Stores storelink()
+	{
+		refresh();
+		click(clickStores);
+		return new Stores();
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'chat-btn-header2')]")
+	private WebElement clickchat;
+	
+	public Stores chatlink()
+	{
+		refresh();
+		click(clickchat);
+		return new Stores();
+	}
+	@FindBy(how=How.XPATH,using="//*[@class='default_kids']")
+	private WebElement rrskids;
+	
+	public HomePage_RRS clickkidslink()
+	{
+		refresh();
+		click(rrskids);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@id='rrsmenubar2']/li[3]")
+	private WebElement kidsbrand;
+	
+	public HomePage_RRS mousehoverbrands()
+	{
+		
+		mouseHoverclick(kidsbrand);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@title='Asics']")
+	private WebElement asics;
+	
+	public Searchresults clickasics()
+	{
+		
+		click(asics);
+		return new Searchresults();
+	}
+	
 	@FindBy(how=How.XPATH,using="//div[@id='specialist2']/div/form/div/input[@value='SEARCH']")
 	private WebElement searchbuttons;
 

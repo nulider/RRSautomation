@@ -307,7 +307,7 @@ click(reviews);
 	
 	
 	
-	@FindBy(how=How.XPATH,using="//*[contains(@name,'XS')]")
+	@FindBy(how=How.XPATH,using="//*[(@name='S')]")
 	private WebElement size;
 	public Productdetails choosesize() 
 	{
@@ -376,6 +376,17 @@ click(reviews);
 		return this;
 	}
 	
+	@FindBy(how=How.XPATH,using="//*[@id='addToCartLinkKids']")
+	private WebElement addtocartbuttonkids;
+	public Productdetails addtocartkids() 
+	{
+		highLighterMethod(driver, addtocartbuttonkids);
+		click(addtocartbuttonkids);	
+		
+		
+		
+		return this;
+	}
 	
 	@FindBy(how=How.XPATH,using="//*[contains(@class,'prod_detail_preorder_inventory')]")
 	private WebElement addtocarterrormessage;
@@ -424,6 +435,24 @@ click(reviews);
 		return new ViewCart();
 	}
 	
+	@FindBy(how=How.XPATH,using="//*[@name='Black/Red']")
+	private WebElement colorshoe;
+	public Productdetails choosecolorofshoe() 
+	{
+		highLighterMethod(driver, colorshoe);
+		click(colorshoe);
+		
+		return this;
+	}	
 	
+	@FindBy(how=How.XPATH,using="//*[@name='1Y']")
+	private WebElement sizeshoe;
+	public Productdetails choosesizeofshoe() 
+	{
+		highLighterMethod(driver, sizeshoe);
+		click(sizeshoe);
+		
+		return this;
+	}	
 }
 

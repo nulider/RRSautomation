@@ -55,9 +55,9 @@ public class Sheet2_Orders_GuestFlow extends ProjectMethods{
 			.cvnfield(cvn)
 			.giftcardexpand()
 			.giftcardcollapse()
-			.revieworder()
-			.placeorderButton()
-	.orderConfirmationmessage();
+			.revieworder();
+			//.placeorderButton()
+	//.orderConfirmationmessage();
 			
 			
 			

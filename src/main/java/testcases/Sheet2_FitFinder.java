@@ -9,8 +9,8 @@ import wdMethods.ProjectMethods;
 public class Sheet2_FitFinder extends ProjectMethods{
 	@BeforeTest
 	public void setData() {
-		testCaseName="Add to cart section";
-		testDescription="Verify the add to cart section";
+		testCaseName="Fit finder section";
+		testDescription="Verify the Fit finder 	 section";
 		testNodes="test";
 		category="Smoke";
 		authors="arjun";
