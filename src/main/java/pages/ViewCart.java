@@ -75,6 +75,15 @@ public class ViewCart extends ProjectMethods{
 		highLighterMethod(driver, viplink);
 		return this;
 	}
+	@FindBy(how=How.XPATH,using="//*[@id='total-commerce-item-cart_count']")
+	private WebElement items;	
+	public ViewCart verifyItems() 
+	{
+		
+	verifyExactText(items, "2 items");
+		highLighterMethod(driver, viplink);
+		return this;
+	}
 	
 	@FindBy(how=How.XPATH,using="//*[contains(@class,'checkout_guest checkout-guest-wrap-btn')]")
 	private WebElement guest;

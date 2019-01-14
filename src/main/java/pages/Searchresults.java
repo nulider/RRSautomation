@@ -225,6 +225,30 @@ highLighterMethod(driver, showperpage);
 	}
 	
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@name,'searchForm')]")
+	private WebElement searchfieldkids;
+
+	public Searchresults entersearchkeykids(String xpath,String data)
+	{
+
+
+		refresh();
+		
+		smallWait();
+		verifyDisplayed(searchfieldkids);
+		
+		explicitWaitsend(xpath,data);
+		
+		clickenter();
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return new Searchresults();
+		
+	}
 	@FindBy(how=How.XPATH,using="//*[contains(@id,'15425_img_url')]")
 	private WebElement secproductLink;
 	

@@ -411,6 +411,21 @@ click(reviews);
 		
 		return new ViewCart();
 	}
+
+	@FindBy(how=How.XPATH,using="//*[contains(@src,'/rrs/img/checkout/viewcartpop_btn.gif')]")
+	private WebElement cartforvip;
+	public ViewCart viewCartforvip() 
+	{
+		
+		
+		click(cartforvip);
+		
+		
+		
+		return new ViewCart();
+	}
+	
+	
 	
 	public OrderSummary viewCarts() 
 	{

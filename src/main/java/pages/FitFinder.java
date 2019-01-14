@@ -29,6 +29,7 @@ public class FitFinder  extends ProjectMethods{
 	public FitFinder clickmale()
 	{
 		click(male);
+		takeSnap();
 		return this;
 	}
 	
@@ -39,6 +40,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", running);
+		takeSnap();
 		return this;
 	}
 	
@@ -49,6 +51,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", pavement);
+		takeSnap();
 		return this;
 	}
 	
@@ -59,6 +62,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", mileage);
+		takeSnap();
 		return this;
 	}
 	
@@ -76,6 +80,7 @@ public class FitFinder  extends ProjectMethods{
 	
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", next);
+		takeSnap();
 		return this;
 	}
 	@FindBy(how=How.XPATH,using="//*[contains(@id,'goals-1')]")
@@ -85,6 +90,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", healthy);
+		takeSnap();
 		return this;
 	}
 	
@@ -95,6 +101,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", under150);
+		takeSnap();
 		return this;
 	}
 	
@@ -106,6 +113,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", higharch);
+		takeSnap();
 		return this;
 	}
 	@FindBy(how=How.XPATH,using="//*[contains(@id,'legPos-out')]")
@@ -115,6 +123,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", legpos);
+		takeSnap();
 		
 		return this;
 	}
@@ -126,7 +135,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", pain);
-		
+		takeSnap();
 		return this;
 	}
 	@FindBy(how=How.XPATH,using="//*[contains(@id,'cushion-5')]")
@@ -138,7 +147,7 @@ public class FitFinder  extends ProjectMethods{
 	
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", level);
-		
+		takeSnap();
 		return this;
 	}
 	
@@ -149,7 +158,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", size);
-		
+		takeSnap();
 		return this;
 	}
 	
@@ -161,6 +170,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", width);
+		takeSnap();
 		return this;
 	}
 	
@@ -171,6 +181,7 @@ public class FitFinder  extends ProjectMethods{
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", getitnow);
+		takeSnap();
 		return this;
 	}
 	

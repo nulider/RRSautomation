@@ -41,7 +41,8 @@ public class AddtwoProductstoCart extends ProjectMethods{
 			.viewCart()
 			.verifycarttitle()
 			.getthisprice()
-			.vip();
+			.vip()
+			.verifyItems();
 			
 			
 			

@@ -39,6 +39,10 @@ public class HomePage_RRS extends ProjectMethods{
 	@FindBy(how=How.XPATH,using="//*[contains(@class,'search2 ui-autocomplete-input')]")
 	private WebElement searchfield;
 	
+	@FindBy(how=How.XPATH,using="//*[contains(@name,'searchForm')]")
+	private WebElement searchfieldkids;
+	
+	
 	@FindBy(how=How.XPATH,using="//*[contains(@href,'/rrs/brand/?cm_sp=nav-_-brands-_-brands')]")
 	private WebElement brands;
 	
@@ -71,6 +75,36 @@ public class HomePage_RRS extends ProjectMethods{
 		explicitWaitsend(xpath,data);
 		
 		click(searchbutton);
+		return new Searchresults();
+		
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@class='klaviyo_inline_fieldset']/input")
+	private WebElement mail;
+	
+	@FindBy(how=How.XPATH,using="//*[@class='klaviyo_inline_fieldset']/button")
+	private WebElement clicksubs;
+	
+	
+	public Searchresults entersearchkeykids(String xpath,String data)
+	{
+
+		type(mail,"u.RJUNKUMr@gmail.com");
+		click(clicksubs);
+	
+				
+		smallWait();
+	
+		
+		explicitWaitsend(xpath,data);
+		
+		clickenter();
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return new Searchresults();
 		
 	}
@@ -169,6 +203,37 @@ public class HomePage_RRS extends ProjectMethods{
 		refresh();
 		click(rrskids);
 		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@href='/rrs/products/RAC55/']")
+	private WebElement viplink;
+	
+	public HomePage_RRS vipfamily()
+	{
+		refresh();
+		click(viplink);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@class='btn-copy']")
+	private WebElement joinbutton;
+	
+	public Productdetails clickjoin()
+	{
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		click(joinbutton);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return new Productdetails();
 	}
 	
 	@FindBy(how=How.XPATH,using="//*[@id='rrsmenubar2']/li[3]")

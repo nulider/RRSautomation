@@ -24,8 +24,8 @@ public class Sheet2_SearchaBrand extends ProjectMethods{
 	public void seachaBrand(String xpath,String brandname) throws AWTException {
 		
 		new HomePage_RRS()
-		.entersearchkey(xpath,brandname)
-		.verifytheresultcheckbox();
+		.entersearchkey(xpath,brandname);
+	
 	}
 
 
