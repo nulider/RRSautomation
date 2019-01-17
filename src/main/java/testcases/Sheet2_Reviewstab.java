@@ -29,7 +29,9 @@ public class Sheet2_Reviewstab extends ProjectMethods{
 			new HomePage_RRS()
 			.searchbrands()
 			.rgearbrand()
+			.reviewstars()
 			.clickproductlink()
+			
 			.reviewsTab();
 }
 }

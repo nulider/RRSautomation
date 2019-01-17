@@ -205,6 +205,13 @@ public class HomePage_RRS extends ProjectMethods{
 		return this;
 	}
 	
+	public UserCreatedConfirmation clickkidslinks()
+	{
+		refresh();
+		click(rrskids);
+		return new UserCreatedConfirmation();
+	}
+	
 	@FindBy(how=How.XPATH,using="//*[@href='/rrs/products/RAC55/']")
 	private WebElement viplink;
 	

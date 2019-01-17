@@ -198,6 +198,22 @@ highLighterMethod(driver, showperpage);
 	@FindBy(how=How.XPATH,using="//*[contains(@id,'15425_img_url')]")
 	private WebElement productLink;
 	
+	@FindBy(how=How.XPATH,using="//*[@src='/rrs/img/icons/stars/stars_small-4.0.png']")
+	private WebElement reviews;
+	
+	public Searchresults reviewstars()
+	{
+		try {
+			pageScroll();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		verifyDisplayed(reviews);
+		return this;
+	}
+	
+	
 	public Productdetails clickproductlink()
 	{
 		try {
@@ -222,6 +238,13 @@ highLighterMethod(driver, showperpage);
 		type(mail,emailaddress);
 		click(clicksubs);
 		return this;
+	}
+	
+	public UserCreatedConfirmation subscribes(String emailaddress)
+	{
+		type(mail,emailaddress);
+		click(clicksubs);
+		return new UserCreatedConfirmation();
 	}
 	
 	

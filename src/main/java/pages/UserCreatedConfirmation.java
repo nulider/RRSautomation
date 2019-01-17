@@ -24,6 +24,12 @@ public class UserCreatedConfirmation extends ProjectMethods{
 		return this;
 	}
 	
+	public HomePage_RRS accountcreations()
+	{
+		verifyDisplayed(createdsuccessfully);
+		return new HomePage_RRS() ;
+	}
+	
 	@FindBy(how=How.XPATH,using="//li[@class='myacount-dropdown']")
 	private WebElement myaccountmousehover;
 	
@@ -32,6 +38,20 @@ public class UserCreatedConfirmation extends ProjectMethods{
 		mouseHover(myaccountmousehover);
 		return this;
 	}
+	
+	@FindBy(how=How.XPATH,using="//*[@class='klaviyo_inline_fieldset']/input")
+	private WebElement mail;
+	
+	@FindBy(how=How.XPATH,using="//*[@class='klaviyo_inline_fieldset']/button")
+	private WebElement clicksubs;
+	
+	public UserCreatedConfirmation subscribe(String emailaddress)
+	{
+		type(mail,emailaddress);
+		click(clicksubs);
+		return this;
+	}
+	
 	
 	@FindBy(how=How.XPATH,using="//ul[@class='dropdown-sub']/li[2]/a")
 	private WebElement logoutlink;
