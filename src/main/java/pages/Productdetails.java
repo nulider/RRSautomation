@@ -16,6 +16,155 @@ public class Productdetails extends ProjectMethods{
 	
 }
 	
+	@FindBy(how=How.XPATH,using="//*[@src='/rrs/kids/images/icons/stars/star-rating-sml-5.0.png']")
+	private WebElement reviewstar;
+	
+	public Productdetails verifyreviewinpdp() 
+	{
+		highLighterMethod(driver, reviewstar);
+		verifyDisplayed(reviewstar);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@class='pr-snippet-link pr-snippet-reviewlink']")
+	private WebElement reviewstars;
+	
+	public Productdetails verifyreviewinpdpkid() 
+	{
+		click(reviewstars);
+		highLighterMethod(driver, reviewskid);
+		verifyDisplayed(reviewskid);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@class='item-number prod_itemid']")
+	private WebElement item;
+	
+	public Productdetails verifyitem() 
+	{
+		highLighterMethod(driver, item);
+		verifyDisplayed(item);
+		return this;
+	}
+	@FindBy(how=How.XPATH,using="//*[@class='prod_detail_reg_price3 prod_reg_title']")
+	private WebElement msrpkid;
+	
+	public Productdetails verifymsrpkid() 
+	{
+		highLighterMethod(driver, msrpkid);
+		verifyDisplayed(msrpkid);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@class='prod_detail_sale_price prod_reg_title']")
+	private WebElement nowkid;
+	
+	public Productdetails verifynowprice() 
+	{
+		highLighterMethod(driver, nowkid);
+		verifyDisplayed(nowkid);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@class='prod_detail_vip_price']")
+	private WebElement vippricekid;
+	
+	public Productdetails verifyvipprice() 
+	{
+		highLighterMethod(driver, vippricekid);
+		verifyDisplayed(vippricekid);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@id='selQtyTitle']")
+	private WebElement qty;
+	
+	public Productdetails verifyquantity() 
+	{
+		highLighterMethod(driver, qty);
+		verifyDisplayed(qty);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@id='selQtyTitle']")
+	private WebElement qtydp;
+	
+	public Productdetails verifyquantitydropdown() 
+	{
+		
+		click(qtydp);
+		click(qtydp);
+		return this;
+	}
+	@FindBy(how=How.XPATH,using="//*[@id='s7zoomviewer_div_fullScreenButton']")
+	private WebElement max;
+	
+	public Productdetails maxandminimage() 
+	{
+		
+		click(max);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		pressescape();
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@id='grp_1Tab']")
+	private WebElement description;
+	
+	public Productdetails verifydescription() 
+	{
+		try {
+			pageScrolltwice();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		highLighterMethod(driver, description);
+		verifyDisplayed(description);
+		return this;
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//*[@id='grp_2Tab']")
+	private WebElement reviewskid;
+	
+	public Productdetails verifyreviewskids() 
+	{
+		click(reviewskid);
+		highLighterMethod(driver, reviewskid);
+		verifyDisplayed(reviewskid);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@id='grp_3Tab']")
+	private WebElement videoskid;
+	
+	public Productdetails verifyvideoskids() 
+	{
+		click(videoskid);
+		highLighterMethod(driver, videoskid);
+		verifyDisplayed(videoskid);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[@class='box-wrap']/h3")
+	private WebElement recommended;
+	
+	public Productdetails verifyrecommended() 
+	{
+		
+		highLighterMethod(driver, recommended);
+		verifyDisplayed(recommended);
+		return this;
+	}
+	
+	
 	
 	
 	@FindBy(how=How.XPATH,using="//*[contains(@class,'product__name')]")
@@ -157,6 +306,16 @@ public class Productdetails extends ProjectMethods{
 	{
 		highLighterMethod(driver, colorofsecond);
 		click(colorofsecond);
+		
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@name,'Black/Red')]")
+	private WebElement colorofsecondkid;
+	public Productdetails choosecolorforsecondproductkid() 
+	{
+		highLighterMethod(driver, colorofsecondkid);
+		click(colorofsecondkid);
 		
 		return this;
 	}
@@ -323,6 +482,25 @@ click(reviews);
 		
 		return this;
 	}
+	
+	@FindBy(how=How.XPATH,using="//*[(@name='1Y')]")
+	private WebElement sizekid;
+	
+	public Productdetails choosesizekid() 
+	{
+		highLighterMethod(driver, sizekid);
+		click(sizekid);
+		FluentWait();
+		try {
+			pageScroll();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return this;
+	}
+	
 	
 	@FindBy(how=How.XPATH,using="//*[contains(@title,'Click for a size chart')]")
 	private WebElement sizechart;

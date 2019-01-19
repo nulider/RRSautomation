@@ -30,7 +30,7 @@ public interface WdMethods {
 
 		public void verifyExactAttribute(WebElement ele, String attribute, String value);
 		public void verifyPartialAttribute(WebElement ele, String attribute, String value);
-	
+		public void robotpressdown();
 		
 		public void verifySelected(WebElement ele);
 		
@@ -49,7 +49,10 @@ public interface WdMethods {
 		
 		public void pressesc();
 		
+		public void pressescape();
+public void popupissue() throws AWTException;
 		public void pageScroll () throws AWTException;
+		public void pageScrolltwice () throws AWTException;
 		public void pageScrollUp() throws AWTException; 
 		
 		public void refresh();

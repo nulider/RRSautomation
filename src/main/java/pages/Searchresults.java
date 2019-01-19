@@ -16,7 +16,190 @@ public class Searchresults extends ProjectMethods{
 		PageFactory.initElements(driver,this);
 	
 }
+
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Kids Gender')]/h3/a")
+private WebElement gender;
 	
+	public Searchresults verifygender() 
+	{
+	
+		verifyDisplayed(gender);
+		highLighterMethod(driver, gender);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Age Group')]/h3/a")
+	private WebElement age;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='view-sort']")
+	private WebElement sort;
+	
+	public Searchresults verifysort() 
+	{
+		highLighterMethod(driver, sort);
+		click(sort);
+		robotpressdown();
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Categories')]/h3/a")
+	private WebElement categories;
+	
+	public Searchresults verifycategories() 
+	{
+		highLighterMethod(driver, categories);
+		click(categories);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		click(categories);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Brand')]/h3/a")
+	private WebElement brand;
+	
+	public Searchresults verifybrand() 
+	{
+		highLighterMethod(driver, brand);
+		click(brand);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		click(brand);
+		return this;
+	}
+	
+
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Shoe Width')]/h3/a")
+	private WebElement shoewidth;
+	
+	public Searchresults verifyshoewidth() 
+	{
+		highLighterMethod(driver, shoewidth);
+		click(shoewidth);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		click(shoewidth);
+		return this;
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Price')]/h3/a")
+	private WebElement price;
+	
+	public Searchresults verifyprice() 
+	{
+		highLighterMethod(driver, price);
+		click(price);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		click(price);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Color')]/h3/a")
+	private WebElement color;
+	
+	public Searchresults verifycolor() 
+	{
+		highLighterMethod(driver, color);
+		click(color);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		click(color);
+		return this;
+	}
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Sale')]/h3/a")
+	private WebElement sale;
+	
+	public Searchresults verifysale() 
+	{
+		highLighterMethod(driver, sale);
+		click(sale);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		click(sale);
+		return this;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public Searchresults verifyage() 
+	{
+	
+		verifyDisplayed(age);
+		highLighterMethod(driver, age);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Shoe Size')]/h3/a")
+	private WebElement size;
+	
+	public Searchresults verifysize() 
+	{
+	
+		verifyDisplayed(size);
+		highLighterMethod(driver, size);
+		return this;
+	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'Category')]/h3/a")
+	private WebElement category;
+	
+	
+	public Searchresults verifycategory() 
+	{
+		try {
+			pageScroll();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		verifyDisplayed(category);
+		highLighterMethod(driver, category);
+		return this;
+	}
 	
 	
 	@FindBy(how=How.XPATH,using="//div[@id='gbidiv_brand']/ul/li[@class='kidsRefinement'][10]")
@@ -294,6 +477,47 @@ try {
 }
 		return new Productdetails();
 	}
+	
+	@FindBy(how=How.XPATH,using="//*[contains(@id,'13095_img')]")
+	private WebElement secproductLinkkid;
+	
+	@FindBy(how=How.XPATH,using="//*[@src='/rrs/kids/images/icons/stars/star-rating-sml-5.0.png']")
+	private WebElement starrating;
+	
+	public Productdetails clickproductlinksecondtimekid()
+	{
+	
+	
+
+JavascriptExecutor js = (JavascriptExecutor)driver;
+js.executeScript("arguments[0].click();", secproductLinkkid);
+try {
+	Thread.sleep(4000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+		return new Productdetails();
+	}
+	
+	public Productdetails mousehoverclickproductlinksecondtimekid()
+	{
+	
+	mouseHover(secproductLinkkid);
+	highLighterMethod(driver, starrating);
+	verifyDisplayed(starrating);
+
+JavascriptExecutor js = (JavascriptExecutor)driver;
+js.executeScript("arguments[0].click();", secproductLinkkid);
+try {
+	Thread.sleep(4000);
+} catch (InterruptedException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+		return new Productdetails();
+	}
+	
 	
 	@FindBy(how=How.XPATH,using="//*[@id='13095_img']")
 	private WebElement asicsprod;

@@ -62,7 +62,16 @@ public class HomePage_RRS extends ProjectMethods{
 		return new Searchresults();
 	}
 
-	
+	public HomePage_RRS clickaccounts() throws AWTException {
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catching();
+		return this;
+	}
 	public Searchresults entersearchkey(String xpath,String data)
 	{
 

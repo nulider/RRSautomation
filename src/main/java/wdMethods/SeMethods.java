@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -437,17 +438,75 @@ takeSnap();
 		
 		driver.findElement(By.xpath("//div[@id='monetate_lightbox_content']")).sendKeys(Keys.ESCAPE);
 			
-
+		
 			
-			
-			
+	}
+	
+	public void pressescape() {
+		
+		Robot robot;
+		try {
+			robot = new Robot();
+			robot.keyPress(KeyEvent.VK_ESCAPE);
+			robot.keyRelease(KeyEvent.VK_ESCAPE);
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+		takeSnap();
 	}
 	
 	public void typeafterclearing(WebElement ele, String data)
 	{
 		ele.sendKeys(Keys.chord(Keys.CONTROL, "a"), data);
+		takeSnap();
 	}
 	
+	public void popupissue() throws AWTException
+	{
+		try {
+
+			WebDriverWait wait = new WebDriverWait(driver, 15);
+			wait.until(ExpectedConditions
+					.visibilityOfAllElementsLocatedBy(By.xpath("//div[@id='monetate_lightbox_content']/img")));
+			driver.findElement(By.xpath("//div[@id='monetate_lightbox_content']/img")).isDisplayed();
+			System.out.println("Popup displayed");
+			Robot rob=new Robot();
+			rob.keyPress(KeyEvent.VK_ESCAPE);
+			rob.keyRelease(KeyEvent.VK_ESCAPE);
+			
+		} catch (Exception e) {
+			if (driver.getTitle().contains("Road Runner Sports: World's Largest Running Shoe Store -Free Shipping")) {
+				System.out.println(e.getMessage());
+				System.out.println("Landing to the First Page");
+			} else {
+				System.out.println("Landing on wrong page");
+				System.out.println(driver.getTitle());
+			}
+
+		}
+		if (driver.getTitle().contains("Road Runner Sports: World's Largest Running Shoe Store -Free Shipping")) {
+			System.out.println("Landing to the First Page");
+		} else {
+			System.out.println("Landing on wrong page");
+			System.out.println(driver.getTitle());
+		}
+
+	}
+
+	
+	public void pageScrolltwice () throws AWTException{
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+		robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
+		robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+		robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
+		
+		
+		takeSnap();
+		
+	}
 	public void pageScroll() throws AWTException
 	{
 		Robot robot = new Robot();
@@ -610,6 +669,23 @@ public void backButton() {
 	takeSnap();
 }
 
+public void robotpressdown()
+{
+	Robot robot;
+	try {
+		robot = new Robot();
+		robot.keyPress(KeyEvent.VK_DOWN);
+		robot.keyRelease(KeyEvent.VK_DOWN);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	} catch (AWTException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
+	
+}
 
 public void footerlink() {
 

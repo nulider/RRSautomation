@@ -47,6 +47,12 @@ public class UserCreatedConfirmation extends ProjectMethods{
 	
 	public UserCreatedConfirmation subscribe(String emailaddress)
 	{
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		type(mail,emailaddress);
 		click(clicksubs);
 		return this;
@@ -223,6 +229,23 @@ try {
 		type(searchfield, data);
 		
 		click(searchbutton);
+		return new Searchresults();
+		
+	}
+	@FindBy(how=How.XPATH,using="//*[@class='search2']")
+	private WebElement searchfieldkid;
+	public Searchresults entersearchkid(String data)
+	{
+
+
+		FluentWait();
+		
+		verifyDisplayed(searchfieldkid);
+		highLighterMethod(driver, searchfieldkid);
+		
+		type(searchfieldkid, data);
+		
+		clickenter();
 		return new Searchresults();
 		
 	}
