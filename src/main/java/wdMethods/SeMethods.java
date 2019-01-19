@@ -486,12 +486,7 @@ takeSnap();
 			}
 
 		}
-		if (driver.getTitle().contains("Road Runner Sports: World's Largest Running Shoe Store -Free Shipping")) {
-			System.out.println("Landing to the First Page");
-		} else {
-			System.out.println("Landing on wrong page");
-			System.out.println(driver.getTitle());
-		}
+		
 
 	}
 
