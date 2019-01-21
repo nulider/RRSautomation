@@ -23,7 +23,7 @@ public abstract class Reporter {
 		ZipUtil.pack(new File("./reports/images"), new File("./reports/images.zip"));
 	}
 	public void startResult() {
-		html = new ExtentHtmlReporter("./reports/images/stagingreport.html");
+		html = new ExtentHtmlReporter("./reports/images/testcasesreport.html");
 		html.setAppendExisting(true);		
 		extent = new ExtentReports();		
 		extent.attachReporter(html);	
