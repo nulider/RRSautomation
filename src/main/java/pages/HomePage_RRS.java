@@ -54,11 +54,18 @@ public class HomePage_RRS extends ProjectMethods{
 	}
 	
 	@FindBy(how=How.XPATH,using="//*[contains(@title,'R Gear, Shop Now')]")
+
 	private WebElement rgear;
+	
+	
+	@FindBy(how=How.XPATH,using="//*[@href='/rrs/brand/Road_Runner_Sports/']")
+	private WebElement rgearbrand;
+	
 	
 	public Searchresults rgearbrand()
 	{
 		click(rgear);
+		click(rgearbrand);
 		return new Searchresults();
 	}
 
